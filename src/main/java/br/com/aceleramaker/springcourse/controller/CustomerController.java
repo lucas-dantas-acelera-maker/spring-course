@@ -1,6 +1,6 @@
 package br.com.aceleramaker.springcourse.controller;
 
-import br.com.aceleramaker.springcourse.model.Customer;
+import br.com.aceleramaker.springcourse.model.entities.Customer;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

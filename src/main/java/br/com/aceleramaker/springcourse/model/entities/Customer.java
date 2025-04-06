@@ -1,4 +1,4 @@
-package br.com.aceleramaker.springcourse.model;
+package br.com.aceleramaker.springcourse.model.entities;
 
 public class Customer {
     private Integer id;
