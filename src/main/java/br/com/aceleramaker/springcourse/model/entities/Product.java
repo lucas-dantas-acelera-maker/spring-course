@@ -15,6 +15,14 @@ public class Product {
     @Column(nullable = false, precision = 11)
     private Double price;
 
+    public Product() {
+    }
+
+    public Product(String name, Double price) {
+        this.name = name;
+        this.price = price;
+    }
+
     public Integer getId() {
         return id;
     }
