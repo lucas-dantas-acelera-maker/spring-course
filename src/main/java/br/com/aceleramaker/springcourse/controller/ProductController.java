@@ -18,9 +18,10 @@ public class ProductController {
     @PostMapping
     public Product addProduct(
             @RequestParam String name,
-            @RequestParam Double price) {
+            @RequestParam Double price,
+            @RequestParam(defaultValue = "0") Double discount) {
 
-        Product product = new Product(name, price);
+        Product product = new Product(name, price, discount);
         productRepository.save(product);
         return product;
     }
