@@ -1,6 +1,9 @@
 package br.com.aceleramaker.springcourse.model.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "Products")
@@ -10,12 +13,16 @@ public class Product {
     private Integer id;
 
     @Column(nullable = false, length = 120)
+    @NotBlank
     private String name;
 
     @Column(nullable = false, precision = 11)
+    @Min(0)
     private Double price;
 
     @Column
+    @Min(0)
+    @Max(1)
     private Double discount;
 
     public Product() {
