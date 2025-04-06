@@ -16,12 +16,7 @@ public class ProductController {
     private ProductRepository productRepository;
 
     @PostMapping
-    public Product addProduct(
-            @RequestParam String name,
-            @RequestParam Double price,
-            @RequestParam(defaultValue = "0") Double discount) {
-
-        Product product = new Product(name, price, discount);
+    public Product addProduct(Product product) {
         productRepository.save(product);
         return product;
     }
